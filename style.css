@@ -1,0 +1,50 @@
+/* To be added later */
+body {
+    background-image: url(background.png); 
+}
+
+/* 
+    Note to self: Use % to make it adapt to many window sizes.
+    Use 1600px = 100% instead of raw pixels value.
+*/
+
+/* These parts will be used for the popup */
+.backdrop {
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background-color: #DDDDDD;
+}
+
+.dialogue {
+    position: relative;
+    padding: 2%;
+    background-color: #DDDDDD;
+    border-radius: 0.5%;
+}
+
+.close {
+    position: absolute;
+    top: 0.5%;
+    right: 0.5%;
+}
+/* End of popup styling */
+
+.font {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gamebuttonsblue {
+    text-align: center;
+    background-color: #1B1BB1;
+}
+
+.gamecardsblue {
+    text-align: center;
+    background-color: linear-gradient(30deg, 20% #1B1BB1, 80% #6F6FF6, 100% #1B1BB1);
+}
+
+.gamecardsred {
+    text-align: center;
+    background-color: linear-gradient(30deg, 20% #B11B1B, 80% #F66F6F, 20% #B11B1B);
+}
