@@ -6,6 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button id="open">Game help</button>
+    <div class="backdrop" id="popup" hidden>
+        <div class="dialogue">
+            <button class="close" id="close"> <!-- Close button -->
+                [X]
+            </button>
+            <h2 class="font" id="welcome">Welcome to Column Battler!</h2>
+            <p class="font">Here is a short overview of the game:</p>
+            <!-- Instructions to be added, coming soon-->
+            <button class="back" id="back" onclick=back()>
+                Back
+            </button>
+            <button class="next" id="next" onclick=next()>
+                Next
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // I got help on how to make popups using AI. Of course, I still edited to fit my situation.
+        const popup = document.querySelector("#popup");
+        document.querySelector("#open").onclick = () => popup.hidden = false;
+        document.querySelector("#close").onclick = () => popup.hidden = true;
+
+        // These functions tell whether to move on to the next instruction or go back
+        let step = 0;
+        // Note, the instruction list is 0 to 16 (inclusive)
+        function back() {
+            if(step != 0) { //Well, we don't want it to go back when it's at the back
+                step--;
+            }
+        }
+
+        function next() {
+            if(step == 16) { //When it's at the front it just closes
+                popup.hidden = true;
+            } else {
+                step++;
+            }
+        }
+    </script>
 </body>
 </html>
