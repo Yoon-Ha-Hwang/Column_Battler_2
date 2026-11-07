@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Column Battler</title>
 </head>
 <body>
     <button id="open">Game help</button>
@@ -14,11 +14,11 @@
             </button>
             <h2 class="font" id="welcome">Welcome to Column Battler!</h2>
             <p class="font">Here is a short overview of the game:</p>
-            <!-- Instructions to be added, coming soon-->
-            <button class="back" id="back" onclick=back()>
+            <p class="font" id="description"></p>
+            <button class="buttondesign" id="back" onclick=back()>
                 Back
             </button>
-            <button class="next" id="next" onclick=next()>
+            <button class="buttondesign" id="next" onclick=next()>
                 Next
             </button>
         </div>
@@ -32,11 +32,14 @@
 
         // These functions tell whether to move on to the next instruction or go back
         let step = 0;
+        description.textContent = intro[0];
+
         // Note, the instruction list is 0 to 16 (inclusive)
         function back() {
             if(step != 0) { //Well, we don't want it to go back when it's at the back
                 step--;
             }
+            description.textContent = intro[step];
         }
 
         function next() {
@@ -44,6 +47,7 @@
                 popup.hidden = true;
             } else {
                 step++;
+                description.textContent = intro[step];
             }
         }
     </script>
