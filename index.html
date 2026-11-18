@@ -11,11 +11,44 @@
         <div class="dialogue">
             <!-- Close button -->
             <button class="close" id="close">X</button>
-            <h2 class="font">Welcome to Column Battler!</h2>
             <p class="font" id="description"></p>
-            <button class="buttondesign" id="back" onclick="back()">Back</button>
-            <button class="buttondesign" id="next" onclick="next()">Next</button>
+            
+            <div class="buttonsatthebottom">
+                <button class="buttondesign" id="back" onclick="back()">Back</button>
+                <button class="buttondesign" id="next" onclick="next()">Next</button>
+            </div>
         </div>
+    </div>
+
+    <!-- Game layout -->
+    <div class="cardsgrid">
+        <div id="redcardone"></div>
+        <div id="redcardtwo"></div>
+        <div id="redcardthree"></div>
+        <div id="redcardfour"></div>
+        <div id="redcardfive"></div>
+        <div id="redcardsix"></div>
+        <br>
+        <div id="columnone"></div>
+        <div id="columntwo"></div>
+        <div id="columnthree"></div>
+        <div id="columnfour"></div>
+        <div id="columnfive"></div>
+        <div id="columnsix"></div>
+        <br>
+        <div id="bluecardone"></div>
+        <div id="bluecardtwo"></div>
+        <div id="bluecardthree"></div>
+        <div id="bluecardfour"></div>
+        <div id="bluecardfive"></div>
+        <div id="bluecardsix"></div>
+        <br>
+        <div id="bluedeploydone"></div>
+        <div id="bluedeploytwo"></div>
+        <div id="bluedeploythree"></div>
+        <div id="bluedeployfour"></div>
+        <div id="bluedeployfive"></div>
+        <div id="bluedeploysix"></div>
     </div>
 
     <script src="script.js"></script>
@@ -24,13 +57,13 @@
         popup.hidden = false;
         document.querySelector("#close").onclick = () => popup.hidden = true;
         let step = 0;
-        description.textContent=intro[0];
+        description.innerHTML=intro[0];
 
         function back() {
             if(step != 0) {
                 step--;
             }
-            description.textContent = intro[step];
+            description.innerHTML = intro[step];
         }
         
         function next() {
@@ -38,7 +71,7 @@
                 popup.hidden = true;
             } else {
                 step++;
-                description.textContent = intro[step];
+                description.innerHTML = intro[step];
             }
         }
     </script>
