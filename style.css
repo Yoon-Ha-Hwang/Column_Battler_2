@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    background-color: #f2f4f8;
+    background-color: #E3E3FF;
 }
 
 /* 
@@ -11,21 +11,28 @@ body {
 /* These parts will be used for the popup */
 .backdrop {
     position: fixed;
-    display: grid;
-    place-items: center;
     padding: 10px;
     /* This part AI-enhanced */
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
     background-color: rgb(0 0 0 / 65%);
     z-index: 1000;
     inset: 0;
-    /* End of AI-enhanced code block */
+}
+
+.backdrop[hidden] {
+    display: none;
 }
 
 .dialogue {
-    min-width: 40vw;
-    max-width: 40vw;
-    max-height: 40vh;
-    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    /* End of AI-enhanced code block */
+    min-width: 90vw;
+    max-width: 90vw;
+    max-height: 20vh;
+    min-height: 20vh;
     padding: 20px;
     color: #222233;
     background-color: #FFFFFF;
@@ -35,11 +42,29 @@ body {
 .close {
     background: transparent;
     font-size: 16px;
-    /* This part AI-enhanced*/
+    /* This part AI-enhanced */
     display: block;
     margin-left: auto;
-    /* End of AI-enhanced code block */
 }
+
+.buttonsatthebottom {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    /* End of AI-enhanced code block */
+    gap: 5px;
+    padding: 0px;
+}
+
+.buttondesign {
+    min-width: 80px;
+    max-width: 80px;
+    min-height: 30px;
+    max-height: 30px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
 /* End of popup styling */
 
 .font {
