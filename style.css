@@ -71,17 +71,17 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.gamebuttonsblue {
+.bluebutton {
     text-align: center;
     background-color: #1B1BB1;
 }
 
-.gamecardsblue {
+.bluecard {
     text-align: center;
     background-color: linear-gradient(30deg, 20% #1B1BB1, 80% #6F6FF6, 100% #1B1BB1);
 }
 
-.gamecardsred {
+.redcard {
     text-align: center;
     background-color: linear-gradient(30deg, 20% #B11B1B, 80% #F66F6F, 20% #B11B1B);
 }
